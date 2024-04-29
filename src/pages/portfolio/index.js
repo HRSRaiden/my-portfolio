@@ -1,9 +1,10 @@
 import React from "react";
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col , Image} from "react-bootstrap";
 import { dataportfolio, meta } from "../../content_option";
 
+import night from "../../assets/images/night.jpeg";
 export const Portfolio = () => {
   return (
     <HelmetProvider>
@@ -23,7 +24,8 @@ export const Portfolio = () => {
           {dataportfolio.map((data, i) => {
             return (
               <div key={i} className="po_item">
-                <img src={data.img} alt="" />
+                {/* <img src={data.img} alt="project image" /> */}
+                <img src={night} alt=""/>
                 <div className="content">
                   <p>{data.description}</p>
                   <a href={data.link}>view project</a>
